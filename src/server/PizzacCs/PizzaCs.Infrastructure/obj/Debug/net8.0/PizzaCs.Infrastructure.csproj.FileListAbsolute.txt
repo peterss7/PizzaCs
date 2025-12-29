@@ -1,0 +1,14 @@
+C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\bin\Debug\net8.0\PizzaCs.Infrastructure.deps.json
+C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\bin\Debug\net8.0\PizzaCs.Infrastructure.dll
+C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\bin\Debug\net8.0\PizzaCs.Infrastructure.pdb
+C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\obj\Debug\net8.0\PizzaCs.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\obj\Debug\net8.0\PizzaCs.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\obj\Debug\net8.0\PizzaCs.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\obj\Debug\net8.0\PizzaCs.Infrastructure.AssemblyInfo.cs
+C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\obj\Debug\net8.0\PizzaCs.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\obj\Debug\net8.0\PizzaCs.Infrastructure.dll
+C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\obj\Debug\net8.0\refint\PizzaCs.Infrastructure.dll
+C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\obj\Debug\net8.0\PizzaCs.Infrastructure.pdb
+C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\obj\Debug\net8.0\ref\PizzaCs.Infrastructure.dll
+C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\bin\Debug\net8.0\PizzaCs.Infrastructure.runtimeconfig.json
+C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\obj\Debug\net8.0\PizzaCs.Infrastructure.genruntimeconfig.cache
