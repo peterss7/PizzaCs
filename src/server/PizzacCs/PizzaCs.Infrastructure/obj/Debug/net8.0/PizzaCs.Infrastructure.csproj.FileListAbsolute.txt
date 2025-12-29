@@ -6,6 +6,7 @@ C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructur
 C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\obj\Debug\net8.0\PizzaCs.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\obj\Debug\net8.0\PizzaCs.Infrastructure.AssemblyInfo.cs
 C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\obj\Debug\net8.0\PizzaCs.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\obj\Debug\net8.0\PizzaCs.Infrastructure.sourcelink.json
 C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\obj\Debug\net8.0\PizzaCs.Infrastructure.dll
 C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\obj\Debug\net8.0\refint\PizzaCs.Infrastructure.dll
 C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Infrastructure\obj\Debug\net8.0\PizzaCs.Infrastructure.pdb

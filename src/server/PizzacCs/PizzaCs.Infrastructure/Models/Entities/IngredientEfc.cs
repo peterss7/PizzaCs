@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PizzaCs.Infrastructure.Models.Entities;
 
-public interface IngredientEfc
+public class IngredientEfc
 {
     [Key]
     public Guid ObjectKey { get; set; }

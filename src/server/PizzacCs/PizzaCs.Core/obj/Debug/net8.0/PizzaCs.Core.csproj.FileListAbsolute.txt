@@ -8,6 +8,7 @@ C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Core\obj\Debu
 C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Core\obj\Debug\net8.0\PizzaCs.Core.AssemblyInfoInputs.cache
 C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Core\obj\Debug\net8.0\PizzaCs.Core.AssemblyInfo.cs
 C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Core\obj\Debug\net8.0\PizzaCs.Core.csproj.CoreCompileInputs.cache
+C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Core\obj\Debug\net8.0\PizzaCs.Core.sourcelink.json
 C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Core\obj\Debug\net8.0\PizzaCs..DFD62DE6.Up2Date
 C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Core\obj\Debug\net8.0\PizzaCs.Core.dll
 C:\Users\peter\projects\csharp\PizzaCs\src\server\PizzacCs\PizzaCs.Core\obj\Debug\net8.0\refint\PizzaCs.Core.dll
