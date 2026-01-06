@@ -1,19 +1,49 @@
-﻿using Microsoft.EntityFrameworkCore;
-using PizzacCs.Api.Extensions;
+﻿
+using Microsoft.EntityFrameworkCore;
+using PizzaCs.Core.Features.Users.Models.Mapping;
+using PizzaCs.Core.Features.Users.Services;
+using PizzaCs.Core.Features.Users.Services.Interfaces;
 using PizzaCs.Infrastructure.Data;
+using PizzaCs.Infrastructure.Repository;
+using PizzaCs.Infrastructure.Repository.Interfaces;
 
-public static class StatupExtensions
+namespace PizzacCs.Api.Extensions;
+
+public static class StartupExtensions
 {
-    public static void ConfigureStartupServices(this IServiceCollection services, ConfigurationManager configuration)
+    public static void StartupApplication(this IServiceCollection services, ConfigurationManager configuration)
     {
+        services.StartupRepositories();
+        services.StartupServices();
+        services.StartupAutomapper();
         services.ConfigureDbContext(configuration);
-        services.ConfigureControllers();
         services.ConfigureSwagger();
-
-        services.ConfigureUtilitiesServices();
-        services.ConfigureCoreServices();
-
+        services.ConfigureControllers();
         services.ConfigureCors();
+    }
+
+    private static void StartupRepositories(this IServiceCollection services)
+    {
+        services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
+    }
+
+    private static void StartupServices(this IServiceCollection services)
+    {
+        services.AddScoped<IUserService, UserService>();
+    }
+
+    private static void StartupAutomapper(this IServiceCollection services)
+    {
+        services.AddAutoMapper(config => 
+        {
+            config.AddMaps(typeof(UserMappingProfile).Assembly);
+        });
+    }
+
+    private static void ConfigureDbContext(this IServiceCollection services, ConfigurationManager configuration)
+    {
+        services.AddDbContext<PizzaContext>(options =>
+            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
     }
 
     private static void ConfigureSwagger(this IServiceCollection services)
@@ -27,12 +57,6 @@ public static class StatupExtensions
         services.AddControllers();
     }
 
-    private static void ConfigureDbContext(this IServiceCollection services, ConfigurationManager configuration)
-    {
-        services.AddDbContext<PizzaContext>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
-    }
-
     private static void ConfigureCors(this IServiceCollection services)
     {
         services.AddCors(options =>
@@ -41,7 +65,7 @@ public static class StatupExtensions
                 policy =>
                 {
                     policy
-                        .WithOrigins("http://localhost:4200", "http://the-meaning-discordancy.local:4200")
+                        .WithOrigins("http://localhost:4200")
                         .AllowAnyHeader()
                         .AllowAnyMethod();
                 });

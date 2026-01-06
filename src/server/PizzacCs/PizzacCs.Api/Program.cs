@@ -1,4 +1,6 @@
 
+using PizzacCs.Api.Extensions;
+
 public class Program
 {
     public static void Main(string[] args)
@@ -11,7 +13,7 @@ public class Program
             .AddJsonFile("appsettings.Local.json", optional: true);
 
 
-        builder.Services.ConfigureStartupServices(configuration);
+        builder.Services.StartupApplication(configuration);
 
         var app = builder.Build();
 
@@ -29,6 +31,5 @@ public class Program
         app.MapControllers();
 
         app.Run();
-
     }
 }

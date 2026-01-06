@@ -22,89 +22,10 @@ namespace PizzaCs.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("PizzaCs.Infrastructure.Models.Entities.AccountEfc", b =>
-                {
-                    b.Property<Guid>("ObjectKey")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("AccountId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AccountId"));
-
-                    b.Property<string>("AccountNumber")
-                        .IsRequired()
-                        .HasMaxLength(32)
-                        .HasColumnType("nvarchar(32)");
-
-                    b.HasKey("ObjectKey");
-
-                    b.HasIndex("AccountNumber")
-                        .IsUnique();
-
-                    b.ToTable("Accounts");
-                });
-
-            modelBuilder.Entity("PizzaCs.Infrastructure.Models.Entities.IngredientEfc", b =>
-                {
-                    b.Property<Guid>("ObjectKey")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("IngredientId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IngredientId"));
-
-                    b.Property<Guid?>("MenuItemEfcObjectKey")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("ObjectKey");
-
-                    b.HasIndex("MenuItemEfcObjectKey");
-
-                    b.ToTable("Ingredients");
-                });
-
-            modelBuilder.Entity("PizzaCs.Infrastructure.Models.Entities.MenuItemEfc", b =>
-                {
-                    b.Property<Guid>("ObjectKey")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<bool>("Available")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("MenuItemId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MenuItemId"));
-
-                    b.Property<string>("MenuItemName")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<double>("Price")
-                        .HasMaxLength(100)
-                        .HasColumnType("float");
-
-                    b.HasKey("ObjectKey");
-
-                    b.ToTable("MenuItems");
-                });
-
             modelBuilder.Entity("PizzaCs.Infrastructure.Models.Entities.UserEfc", b =>
                 {
                     b.Property<Guid>("ObjectKey")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("AccountNumber")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("FirstName")
@@ -117,50 +38,15 @@ namespace PizzaCs.Infrastructure.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("UserEmail")
-                        .IsRequired()
-                        .HasMaxLength(254)
-                        .HasColumnType("nvarchar(254)");
-
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
 
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
                     b.HasKey("ObjectKey");
 
-                    b.HasIndex("AccountNumber");
-
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("PizzaCs.Infrastructure.Models.Entities.IngredientEfc", b =>
-                {
-                    b.HasOne("PizzaCs.Infrastructure.Models.Entities.MenuItemEfc", null)
-                        .WithMany("Ingredients")
-                        .HasForeignKey("MenuItemEfcObjectKey");
-                });
-
-            modelBuilder.Entity("PizzaCs.Infrastructure.Models.Entities.UserEfc", b =>
-                {
-                    b.HasOne("PizzaCs.Infrastructure.Models.Entities.AccountEfc", "Account")
-                        .WithMany()
-                        .HasForeignKey("AccountNumber")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Account");
-                });
-
-            modelBuilder.Entity("PizzaCs.Infrastructure.Models.Entities.MenuItemEfc", b =>
-                {
-                    b.Navigation("Ingredients");
                 });
 #pragma warning restore 612, 618
         }

@@ -2,10 +2,6 @@
 
 public interface IRepositoryWrapper
 {
-    IUserRepository UserRepository {  get; }
-    IAccountRepository AccountRepository { get; }
-    IMenuItemRepository MenuItemRepository { get; }
-    IIngredientRepository IngredientRepository { get; }
-
+    IUserRepository UserRepository { get; }
     void Save();
 }
